@@ -10,11 +10,11 @@ const Person = function (firstName, birthYear) {
   // };
 };
 
-const izu = new Person('Izu', 1997);
+const jane = new Person('jane', 1990);
 const mary = new Person('mary', 1998);
 const jude = new Person('jude', 1999);
 const kent = new Person('kent', 2000);
-console.log(izu, mary, jude, kent);
+console.log(jane, mary, jude, kent);
 
 // console.log(jude instanceof Person);
 
@@ -24,13 +24,13 @@ Person.prototype.calcAge = function () {
 };
 
 console.log(Person.prototype);
-izu.calcAge();
+jane.calcAge();
 mary.calcAge();
-console.log(izu.__proto__);
-console.log(izu.__proto__ === Person.prototype);
+console.log(jane.__proto__);
+console.log(jane.__proto__ === Person.prototype);
 console.log(Person.prototype.isPrototypeOf(Person));
 
 Person.prototype.species = 'Homo Sapiens';
-console.log(izu.species);
+console.log(jane.species);
 
-console.log(izu.hasOwnProperty('firstName'));
+console.log(jane.hasOwnProperty('firstName'));

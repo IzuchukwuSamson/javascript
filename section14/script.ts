@@ -5,17 +5,27 @@ const ThePerson = function (firstName: string, birthYear: number): void {
   this.birthYear = birthYear;
 };
 
-const Izu = new ThePerson('Izu', 1997);
-// console.log(Izu);
+const sam = new ThePerson('sam', 1990);
+// console.log(sam);
 
-// console.log(Izu instanceof Person);
+// console.log(sam instanceof ThePerson);
 
-// let myName: ThePerson = new ThePerson('Izu', 1997)
+// let myName: ThePerson = new ThePerson('sam', 1997)
 // let car: Person = new Car();
 
-// Protoype
-Person.prototype.calcAge = function () {
+//Prototypes
+ThePerson.prototype.calcAge = function () {
   console.log(2037 - this.birthYear);
 };
 
-Izu.calcAge();
+console.log(ThePerson.prototype);
+sam.calcAge();
+mary.calcAge();
+console.log(sam.__proto__);
+console.log(sam.__proto__ === ThePerson.prototype);
+console.log(ThePerson.prototype.isPrototypeOf(ThePerson));
+
+ThePerson.prototype.species = 'Homo Sapiens';
+console.log(sam.species);
+
+console.log(sam.hasOwnProperty('firstName'));
