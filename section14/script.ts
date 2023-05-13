@@ -48,4 +48,31 @@ class ThePerson {
   }
 }
 
-const felix = new Person('felix', 1996);
+const felix = new ThePerson('felix', 1996);
+
+//////////////////////////////////////////////////////////
+
+/*
+
+const PersonProtoTs: any = {
+  calcAge(): void {
+    console.log(2037 - this.birthYear);
+  },
+
+  init(firstName: string, birthYear: number): void {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProtoTs);
+console.log(steven);
+steven.name = 'Steven';
+steven.birthYear = 2002;
+steven.calcAge();
+
+console.log(steven.__proto__ === PersonProtoTs);
+
+const steve = Object.create(PersonProtoTs);
+
+*/
