@@ -129,30 +129,82 @@ export function canFreePrisoner(
   prisonerIsAwake,
   petDogIsPresent
 ) {
-  // throw new Error('Remove this line and implement the function');
   switch (true) {
-    case knightIsAwake === false &&
-      archerIsAwake === true &&
-      prisonerIsAwake === false &&
-      petDogIsPresent === false:
-      return false;
+    // 14
     case knightIsAwake === false &&
       archerIsAwake === false &&
       prisonerIsAwake === false &&
       petDogIsPresent === false:
       return false;
+    // 15
     case knightIsAwake === false &&
-      archerIsAwake === true &&
+      archerIsAwake === false &&
       prisonerIsAwake === false &&
       petDogIsPresent === true:
       return true;
+    // 16
     case knightIsAwake === false &&
-      archerIsAwake === true &&
-      prisonerIsAwake === false &&
+      archerIsAwake === false &&
+      prisonerIsAwake === true &&
       petDogIsPresent === false:
       return true;
-    default:
+    // 17
+    case knightIsAwake === false &&
+      archerIsAwake === false &&
+      prisonerIsAwake === true &&
+      petDogIsPresent === true:
       return true;
+    // 18
+    case knightIsAwake && archerIsAwake && prisonerIsAwake && petDogIsPresent:
+      return false;
+    // 19
+    case knightIsAwake && archerIsAwake && prisonerIsAwake && !petDogIsPresent:
+      return false;
+    // 20
+    case knightIsAwake && archerIsAwake && !prisonerIsAwake && petDogIsPresent:
+      return false;
+    // 21
+    case knightIsAwake && archerIsAwake && !prisonerIsAwake && !petDogIsPresent:
+      return false;
+    // 22
+    case !knightIsAwake && !archerIsAwake && prisonerIsAwake && petDogIsPresent:
+      return false;
+    // 23
+    case knightIsAwake === true &&
+      archerIsAwake === false &&
+      prisonerIsAwake === false &&
+      petDogIsPresent === true:
+      return true;
+    // 24
+    case !knightIsAwake &&
+      !archerIsAwake &&
+      !prisonerIsAwake &&
+      petDogIsPresent:
+      return false;
+    // 25
+    case knightIsAwake === true &&
+      archerIsAwake == false &&
+      prisonerIsAwake === true &&
+      petDogIsPresent === true:
+      return true;
+    // 26
+    case !knightIsAwake && archerIsAwake && prisonerIsAwake && petDogIsPresent:
+      return false;
+    // 27
+    case !knightIsAwake && archerIsAwake && prisonerIsAwake && !petDogIsPresent:
+      return false;
+    // 28
+    case !knightIsAwake && archerIsAwake && !prisonerIsAwake && petDogIsPresent:
+      return false;
+    // 29
+    case !knightIsAwake &&
+      archerIsAwake &&
+      !prisonerIsAwake &&
+      !petDogIsPresent:
+      return false;
+
+    default:
+      return false;
   }
 }
 canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent);
