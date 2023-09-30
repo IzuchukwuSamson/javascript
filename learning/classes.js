@@ -83,14 +83,9 @@ class Square2 {
   static equals(a, b) {
     return a.width * a.heigth === b.width * b.heigth;
   }
-
-  static isValidDimensions(width, heigth) {
-    return width === heigth;
-  }
 }
 
 let square1 = new Square2(8);
 let square2 = new Square2(8);
 // console.log(square1);
-// console.log(Square2.equals(square1, square2));
-console.log(Square2.isValidDimensions(6, 0));
+console.log(Square2.equals(square1, square2));
