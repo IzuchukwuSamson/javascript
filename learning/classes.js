@@ -85,8 +85,8 @@ class Square2 {
   }
 }
 
-let square1 = new Square2(8);
-let square2 = new Square2(8);
+// let square1 = new Square2(8);
+// let square2 = new Square2(8);
 // console.log(square1);
-console.log(Square2.equals(square1, square2));
+// console.log(Square2.equals(square1, square2));
 // console.log(Square2.equals(square1, square2));
